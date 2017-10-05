@@ -5,6 +5,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.text :short_description
       t.text :city
       t.text :state
+      t.date :founded
 
       t.timestamps null: false
     end

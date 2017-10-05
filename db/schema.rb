@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20171004165652) do
     t.text     "short_description"
     t.text     "city"
     t.text     "state"
+    t.date     "founded"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
