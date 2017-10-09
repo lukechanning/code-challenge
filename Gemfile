@@ -25,6 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Bootstrap for easy styling
 gem 'bootstrap', '~> 4.0.0.beta'
 
+# Add Faker for easier seeding
+gem 'faker'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

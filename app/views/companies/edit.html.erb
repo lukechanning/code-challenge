@@ -2,5 +2,15 @@
 
 <%= render 'form' %>
 
+<hr> 
+
+<h3>Founders</h3>
+<% @company.founders.each do |founder| %>
+    <ul>
+        <li>Name: <%= founder.name %></li>
+        <li>Title: <%= founder.title %></li>
+    </ul>
+<% end %>
+
 <%= link_to 'Show', @company %> |
 <%= link_to 'Back', companies_path %>
