@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20171009220127) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "companies", force: :cascade do |t|
     t.text     "name"
     t.text     "short_description"
@@ -38,8 +41,8 @@ ActiveRecord::Schema.define(version: 20171009220127) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "tag_companies", ["company_id"], name: "index_tag_companies_on_company_id"
-  add_index "tag_companies", ["tag_id"], name: "index_tag_companies_on_tag_id"
+  add_index "tag_companies", ["company_id"], name: "index_tag_companies_on_company_id", using: :btree
+  add_index "tag_companies", ["tag_id"], name: "index_tag_companies_on_tag_id", using: :btree
 
   create_table "tags", force: :cascade do |t|
     t.string   "category"
