@@ -2,8 +2,8 @@
 
 <h1>Listing Founders</h1>
 
-<table>
-  <thead>
+<table class="table table-striped">
+  <thead class="thead-inverse">
     <tr>
       <th>Name</th>
       <th>Title</th>
@@ -15,12 +15,11 @@
   <tbody>
     <% @founders.each do |founder| %>
       <tr>
-        <td><%= founder.name %></td>
+        <td><%= link_to founder.name, founder %></td>
         <td><%= founder.title %></td>
         <td><%= founder.company_id %></td>
-        <td><%= link_to 'Show', founder %></td>
-        <td><%= link_to 'Edit', edit_founder_path(founder) %></td>
-        <td><%= link_to 'Destroy', founder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_founder_path(founder), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', founder, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +27,5 @@
 
 <br>
 
-<%= link_to 'New Founder', new_founder_path %>
+<%= link_to 'New Founder', new_founder_path, class: "btn btn-success" %>
+

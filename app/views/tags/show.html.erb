@@ -5,5 +5,7 @@
   <%= @tag.category %>
 </p>
 
-<%= link_to 'Edit', edit_tag_path(@tag) %> |
-<%= link_to 'Back', tags_path %>
+<hr>
+
+<%= link_to 'Edit', edit_tag_path(@tag), class: "btn btn-primary" %>
+<%= link_to 'Back', tags_path, class: "btn btn-danger" %>

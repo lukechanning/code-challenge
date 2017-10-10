@@ -1,6 +1,12 @@
 <h1>Editing Founder</h1>
 
-<%= render 'form' %>
+<div class="row">
+    <div class="col">
+        <%= render 'form' %>
+    </div>
+</div>
 
-<%= link_to 'Show', @founder %> |
-<%= link_to 'Back', founders_path %>
+<hr>
+
+<%= link_to 'Show', @founder, class: "btn btn-primary" %>
+<%= link_to 'Back', founders_path, class: "btn btn-success" %>

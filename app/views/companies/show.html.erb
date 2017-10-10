@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<% if flash[:notice] %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
 
 <p>
   <strong>Name:</strong>
@@ -27,5 +29,5 @@
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<%= link_to 'Edit', edit_company_path(@company), class: "btn btn-primary" %>
+<%= link_to 'Home', companies_path, class: "btn btn-success" %>

@@ -1,16 +1,23 @@
 <h1>Editing Company</h1>
 
-<%= render 'form' %>
-
 <hr> 
 
-<h3>Founders</h3>
-<% @company.founders.each do |founder| %>
-    <ul>
-        <li>Name: <%= founder.name %></li>
-        <li>Title: <%= founder.title %></li>
-    </ul>
-<% end %>
+<div class="row">
+    <div class="col">
+        <%= render 'form' %>
+    </div>
+    <div class="col">
+        <h3>Founders</h3>
+        <% @company.founders.each do |founder| %>
+            <ul>
+                <li>Name: <%= founder.name %></li>
+                <li>Title: <%= founder.title %></li>
+            </ul>
+        <% end %>
+    </div>
+</div>
 
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>
+<hr>
+
+<%= link_to 'Show', @company, class: "btn btn-primary" %>
+<%= link_to 'Back', companies_path, class: "btn btn-success" %>
