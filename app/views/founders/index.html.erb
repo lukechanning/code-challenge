@@ -17,7 +17,7 @@
       <tr>
         <td><%= link_to founder.name, founder %></td>
         <td><%= founder.title %></td>
-        <td><%= founder.company_id %></td>
+        <td><%= founder.company.name %></td>
         <td><%= link_to 'Edit', edit_founder_path(founder), class: "btn btn-primary" %></td>
         <td><%= link_to 'Destroy', founder, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
