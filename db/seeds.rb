@@ -22,6 +22,20 @@ end
     Founder.create!(
         name: Faker::HitchhikersGuideToTheGalaxy.character,
         title: Faker::Company.profession.titleize,
-        company_id: rand(1..19)
+        company_id: rand(1..20)
     )
 end 
+
+
+35.times do |i|
+    Tag.create!(
+        category: Faker::Lorem.word.titleize
+    )
+end 
+
+35.times do |i|
+    TagCompany.create!(
+        tag_id: rand(1..35),
+        company_id: rand(1..20)
+    )
+end

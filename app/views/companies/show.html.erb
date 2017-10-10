@@ -20,5 +20,12 @@
   <%= @company.state %>
 </p>
 
+<p>
+  <strong>Tags:</strong>
+  <% @company.tags.each do |tag| %>
+    <%= tag.category %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>

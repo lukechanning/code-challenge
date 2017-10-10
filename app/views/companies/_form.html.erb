@@ -27,6 +27,9 @@
     <%= f.label :state %><br>
     <%= f.text_area :state %>
   </div>
+  <div class="field">
+    <%= f.collection_select :tag_ids, Tag.all, :id, :category, {}, { multiple: true } %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
